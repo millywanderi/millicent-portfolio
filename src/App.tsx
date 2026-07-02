@@ -1,12 +1,11 @@
-import Navbar from "./components/layout/Navbar";
+import Layout from "./components/layout/Layout";
 import Hero from "./components/sections/Hero";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <Hero />
-    </>
+    </Layout>
   );
 }
 

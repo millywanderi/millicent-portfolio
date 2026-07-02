@@ -2,46 +2,61 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="min-h-screen flex items-center py-28 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-        <p className="text-blue-600 font-semibold mb-4">
-          Hello, I'm
-        </p>
+        <div>
 
-        <h1 className="text-6xl font-extrabold mb-6">
-          Millicent Nyambura Wanderi
-        </h1>
+          <p className="text-blue-700 font-semibold mb-6">
+            Hello, I'm
+          </p>
 
-        <h2 className="text-2xl text-gray-600 mb-6">
-          Disaster Management Professional • Software Engineer • Humanitarian Innovation
-        </h2>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-snug">
+            Millicent
+            <br />
+            Nyambura Wanderi
+          </h1>
 
-        <p className="text-lg text-gray-600 max-w-2xl leading-8 mb-10">
-          Building intelligent technologies that strengthen disaster resilience,
-          humanitarian response, and sustainable development across Africa.
-        </p>
+          <h2 className="text-2xl text-gray-600 mt-6">
+            Disaster Management Professional
+            <br />
+            Software Engineer
+            <br />
+            Humanitarian Innovator
+          </h2>
 
-        <div className="flex gap-4 mb-8">
-          <a
-            href="#projects"
-            className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
-          >
-            View My Work
-          </a>
+          <p className="mt-8 text-lg leading-8 text-gray-600 max-w-xl">
+            Building intelligent technologies that improve disaster resilience,
+            humanitarian response, and sustainable development through
+            artificial intelligence and software engineering.
+          </p>
 
-          <a
-            href="#contact"
-            className="border border-blue-700 text-blue-700 px-6 py-3 rounded-lg hover:bg-blue-700 hover:text-white"
-          >
-            Contact Me
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 mt-12">
+
+            <button className="bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800">
+              View Projects
+            </button>
+
+            <button className="border border-blue-700 text-blue-700 px-8 py-3 rounded-lg hover:bg-blue-700 hover:text-white">
+              Download CV
+            </button>
+
+          </div>
+
+          <div className="flex gap-8 text-2xl mt-14 text-gray-700">
+            <FaGithub className="cursor-pointer hover:text-blue-700" />
+            <FaLinkedin className="cursor-pointer hover:text-blue-700" />
+            <FaEnvelope className="cursor-pointer hover:text-blue-700" />
+          </div>
+
         </div>
 
-        <div className="flex gap-6 text-2xl">
-          <FaGithub />
-          <FaLinkedin />
-          <FaEnvelope />
+        <div className="flex justify-center">
+
+          <div className="w-96 h-96 rounded-full bg-blue-100 flex items-center justify-center text-7xl font-bold text-blue-700 shadow-xl">
+            MW
+          </div>
+
         </div>
 
       </div>
