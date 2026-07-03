@@ -4,10 +4,13 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -19,6 +22,12 @@ body {
     "Segoe UI",
     sans-serif;
 
-  background: white;
+  background: #f9fafb;
   color: #111827;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
