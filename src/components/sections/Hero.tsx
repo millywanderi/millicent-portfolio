@@ -11,7 +11,10 @@ import profileImage from "../../assets/millicent.jpg";
 
 const Hero = () => {
   return (
-    <section className="bg-gray-50">
+    <section
+       id="home"
+      className="bg-gray-50"
+    >
       <div className="max-w-7xl mx-auto px-8 lg:px-12 py-10">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] lg:gap-24 items-center min-h-[80vh]">
           {/* LEFT SIDE */}
