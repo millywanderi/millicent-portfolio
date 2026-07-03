@@ -4,6 +4,10 @@ import {
   FaGitAlt,
   FaDocker,
   FaLinux,
+  FaCode,
+  FaDatabase,
+  FaServer,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 import {
@@ -14,172 +18,164 @@ import {
   SiMysql,
   SiTailwindcss,
   SiHtml5,
-  SiCss3,
-  SiC,
 } from "react-icons/si";
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="bg-gray-50 py-24"
-    >
+    <section id="skills" className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-8 lg:px-12">
 
-        <div className="text-center mb-20">
+        {/* Heading */}
 
+        <div className="text-center mb-20">
           <p className="text-blue-700 font-semibold uppercase tracking-widest">
             Skills
           </p>
 
-          <h2 className="text-4xl font-extrabold mt-3">
+          <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
             Technologies & Expertise
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600 leading-8">
-            My experience spans disaster management, humanitarian
-            innovation, software engineering, artificial intelligence,
-            and backend systems.
+          <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
+            My expertise spans disaster management, humanitarian innovation,
+            software engineering, artificial intelligence, and backend systems.
           </p>
-
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        {/* Skill Cards */}
+
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
           {/* Programming */}
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-            <h3 className="font-bold text-xl mb-8">
-              Programming
-            </h3>
+          <div className="rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition">
+            <h3 className="mb-8 text-xl font-bold">Programming</h3>
 
             <div className="space-y-5">
 
               <div className="flex items-center gap-3">
                 <FaPython className="text-2xl text-blue-600" />
-                Python
+                <span>Python</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <SiJavascript className="text-2xl text-yellow-500" />
-                JavaScript
+                <span>JavaScript</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <SiTypescript className="text-2xl text-blue-500" />
-                TypeScript
+                <SiTypescript className="text-2xl text-blue-600" />
+                <span>TypeScript</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <SiC className="text-2xl text-blue-700" />
-                C Programming
+                <FaCode className="text-2xl text-gray-700" />
+                <span>C Programming</span>
               </div>
 
             </div>
-
           </div>
 
           {/* Frontend */}
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-            <h3 className="font-bold text-xl mb-8">
-              Frontend
-            </h3>
+          <div className="rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition">
+            <h3 className="mb-8 text-xl font-bold">Frontend</h3>
 
             <div className="space-y-5">
 
               <div className="flex items-center gap-3">
-                <FaReact className="text-2xl text-sky-500" />
-                React
+                <FaReact className="text-2xl text-cyan-500" />
+                <span>React</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <SiTailwindcss className="text-2xl text-cyan-500" />
-                Tailwind CSS
+                <SiTailwindcss className="text-2xl text-sky-500" />
+                <span>Tailwind CSS</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <SiHtml5 className="text-2xl text-orange-500" />
-                HTML5
+                <span>HTML5</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <SiCss3 className="text-2xl text-blue-500" />
-                CSS3
+                <FaCode className="text-2xl text-blue-500" />
+                <span>CSS3</span>
               </div>
 
             </div>
-
           </div>
 
           {/* Backend */}
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-            <h3 className="font-bold text-xl mb-8">
-              Backend
-            </h3>
+          <div className="rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition">
+            <h3 className="mb-8 text-xl font-bold">Backend</h3>
 
             <div className="space-y-5">
 
               <div className="flex items-center gap-3">
                 <SiFastapi className="text-2xl text-green-600" />
-                FastAPI
+                <span>FastAPI</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <SiPostgresql className="text-2xl text-blue-700" />
-                PostgreSQL
+                <span>PostgreSQL</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <SiMysql className="text-2xl text-blue-500" />
-                MySQL
+                <span>MySQL</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaDatabase className="text-2xl text-gray-700" />
+                <span>SQLAlchemy</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <FaDocker className="text-2xl text-blue-600" />
-                Docker
+                <span>Docker</span>
               </div>
 
             </div>
-
           </div>
 
           {/* Professional */}
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-            <h3 className="font-bold text-xl mb-8">
+          <div className="rounded-2xl bg-white p-8 shadow-lg hover:shadow-xl transition">
+            <h3 className="mb-8 text-xl font-bold">
               Professional
             </h3>
 
             <div className="space-y-5">
 
-              <div>Disaster Risk Reduction</div>
-
-              <div>Emergency Response</div>
-
-              <div>AI for Humanitarian Action</div>
-
-              <div>Research & Data Analysis</div>
-
-              <div>Leadership</div>
+              <div className="flex items-center gap-3">
+                <FaShieldAlt className="text-2xl text-blue-700" />
+                <span>Disaster Risk Reduction</span>
+              </div>
 
               <div className="flex items-center gap-3">
-                <FaGitAlt className="text-2xl text-red-600" />
-                Git & GitHub
+                <FaShieldAlt className="text-2xl text-red-600" />
+                <span>Emergency Response</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaServer className="text-2xl text-purple-600" />
+                <span>AI for Humanitarian Action</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaGitAlt className="text-2xl text-orange-600" />
+                <span>Git & GitHub</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <FaLinux className="text-2xl" />
-                Linux
+                <span>Linux</span>
               </div>
 
             </div>
-
           </div>
 
         </div>
