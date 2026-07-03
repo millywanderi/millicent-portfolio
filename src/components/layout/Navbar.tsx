@@ -1,63 +1,58 @@
-import { useState } from "react";
-import { FaMoon, FaSun, FaDownload } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "../../context/ThemeContext";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
+
         <div>
           <h1 className="text-2xl font-bold text-blue-700">
             Millicent Wanderi
           </h1>
 
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
             Disaster Management • Software Engineering
           </p>
         </div>
 
-        {/* Right Side */}
+        {/* Navigation */}
+
         <div className="flex items-center gap-8">
 
-          {/* Navigation */}
           <nav>
-            <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+            <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700 dark:text-gray-200">
 
               <li>
-                <a
-                  href="#about"
-                  className="hover:text-blue-700 transition"
-                >
+                <a href="#about" className="hover:text-blue-700 transition">
                   About
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#experience"
-                  className="hover:text-blue-700 transition"
-                >
+                <a href="#skills" className="hover:text-blue-700 transition">
+                  Skills
+                </a>
+              </li>
+
+              <li>
+                <a href="#experience" className="hover:text-blue-700 transition">
                   Experience
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#projects"
-                  className="hover:text-blue-700 transition"
-                >
+                <a href="#projects" className="hover:text-blue-700 transition">
                   Projects
                 </a>
               </li>
 
               <li>
-                <a
-                  href="#contact"
-                  className="hover:text-blue-700 transition"
-                >
+                <a href="#contact" className="hover:text-blue-700 transition">
                   Contact
                 </a>
               </li>
@@ -65,15 +60,17 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          {/* Dark Mode Toggle */}
+          {/* Dark Mode */}
+
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="rounded-full p-3 text-gray-700 hover:bg-gray-100 transition"
+            onClick={toggleTheme}
+            className="rounded-full bg-gray-100 p-3 transition hover:scale-110 dark:bg-slate-700"
           >
-            {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
+            {darkMode ? <FaSun /> : <FaMoon />}
           </button>
 
         </div>
+
       </div>
     </header>
   );
