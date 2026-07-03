@@ -124,7 +124,7 @@ const Projects = () => {
               <div className="mt-12 flex gap-5">
 
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/millywanderi/ReliefTrackAI"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 rounded-xl bg-gray-900 px-6 py-3 text-white hover:bg-black transition"
