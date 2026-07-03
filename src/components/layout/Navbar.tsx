@@ -5,12 +5,16 @@ const Navbar = () => {
   const { darkMode, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-slate-200/50 bg-white/80 backdrop-blur-xl transition dark:border-slate-700 dark:bg-slate-900/80">
+
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
 
-        <div>
+        <a
+          href="#home"
+          className="group"
+        >
           <h1 className="text-2xl font-bold text-blue-700">
             Millicent Wanderi
           </h1>
@@ -18,55 +22,46 @@ const Navbar = () => {
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Disaster Management • Software Engineering
           </p>
-        </div>
+        </a>
 
         {/* Navigation */}
 
-        <div className="flex items-center gap-8">
+        <nav className="hidden lg:block">
 
-          <nav>
-            <ul className="hidden md:flex items-center gap-8 font-medium text-gray-700 dark:text-gray-200">
+          <ul className="flex items-center gap-8 font-medium">
 
-              <li>
-                <a href="#home" className="hover:text-blue-700 transition">
-                  Home
+            {[
+              "Home",
+              "About",
+              "Skills",
+              "Experience",
+              "Projects",
+              "Contact",
+            ].map((item) => (
+
+              <li key={item}>
+
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="relative text-gray-700 transition hover:text-blue-700 dark:text-gray-200"
+                >
+                  {item}
+
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-700 transition-all duration-300 hover:w-full"></span>
+
                 </a>
+
               </li>
 
-              <li>
-                <a href="#about" className="hover:text-blue-700 transition">
-                  About
-                </a>
-              </li>
+            ))}
 
-              <li>
-                <a href="#skills" className="hover:text-blue-700 transition">
-                  Skills
-                </a>
-              </li>
+          </ul>
 
-              <li>
-                <a href="#experience" className="hover:text-blue-700 transition">
-                  Experience
-                </a>
-              </li>
+        </nav>
 
-              <li>
-                <a href="#projects" className="hover:text-blue-700 transition">
-                  Projects
-                </a>
-              </li>
+        {/* Right Side */}
 
-              <li>
-                <a href="#contact" className="hover:text-blue-700 transition">
-                  Contact
-                </a>
-              </li>
-
-            </ul>
-          </nav>
-
-          {/* Dark Mode */}
+        <div className="flex items-center gap-4">
 
           <button
             onClick={toggleTheme}
@@ -75,9 +70,18 @@ const Navbar = () => {
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
 
+          <a
+            href="/Millicent_Wanderi_CV.pdf"
+            download
+            className="rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white transition hover:bg-blue-800"
+          >
+            Resume
+          </a>
+
         </div>
 
       </div>
+
     </header>
   );
 };
