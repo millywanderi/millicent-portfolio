@@ -8,17 +8,13 @@ import {
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="bg-white py-24"
-    >
+    <section id="contact" className="bg-white py-24">
       <div className="max-w-6xl mx-auto px-8">
 
         {/* Heading */}
+        <div className="mb-16 text-center">
 
-        <div className="text-center mb-16">
-
-          <p className="text-blue-700 font-semibold uppercase tracking-widest">
+          <p className="font-semibold uppercase tracking-widest text-blue-700">
             Contact
           </p>
 
@@ -26,106 +22,141 @@ const Contact = () => {
             Let's Build Resilient Communities Together
           </h2>
 
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 leading-8">
-            I'm always interested in discussing humanitarian innovation, AI for disaster management, software engineering, research collaborations, and graduate study opportunities.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            I'm always interested in discussing humanitarian innovation,
+            AI for disaster management, software engineering,
+            research collaborations, and graduate study opportunities.
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid gap-16 lg:grid-cols-2">
 
-          {/* Left */}
+          {/* Left Side */}
+          <div className="space-y-6">
 
-          <div className="space-y-8">
+            {/* Email */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
 
-            <div className="flex items-center gap-5">
+              <div className="flex items-start gap-5">
 
-              <div className="bg-blue-700 text-white p-4 rounded-full">
-                <FaEnvelope />
-              </div>
+                <div className="rounded-full bg-blue-700 p-4 text-white">
+                  <FaEnvelope />
+                </div>
 
-              <div>
+                <div className="flex-1">
 
-                <p className="font-semibold">
-                  Email
-                </p>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Email
+                  </h3>
 
-                <a
-                  href="mailto:wanderimillicent5@gmail.com"
-                  className="text-gray-600 hover:text-blue-700"
-                >
-                  wanderimillicent5@gmail.com
-                </a>
+                  <p className="mt-2 text-gray-600">
+                    Let's discuss opportunities, collaborations,
+                    or graduate studies.
+                  </p>
 
-              </div>
+                  <a
+                    href="mailto:wanderimillicent5@gmail.com"
+                    className="mt-4 inline-block font-semibold text-blue-700 hover:underline"
+                  >
+                    Contact Me →
+                  </a>
 
-            </div>
-
-            <div className="flex items-center gap-5">
-
-              <div className="bg-blue-700 text-white p-4 rounded-full">
-                <FaLinkedin />
-              </div>
-
-              <div>
-
-                <p className="font-semibold">
-                  LinkedIn
-                </p>
-
-                <a
-                  href="https://www.linkedin.com/in/millicent-wanderi-9aa894206/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-600 hover:text-blue-700"
-                >
-                  https://www.linkedin.com/in/millicent-wanderi-9aa894206/
-                </a>
+                </div>
 
               </div>
 
             </div>
 
-            <div className="flex items-center gap-5">
+            {/* LinkedIn */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
 
-              <div className="bg-blue-700 text-white p-4 rounded-full">
-                <FaGithub />
-              </div>
+              <div className="flex items-start gap-5">
 
-              <div>
+                <div className="rounded-full bg-blue-700 p-4 text-white">
+                  <FaLinkedin />
+                </div>
 
-                <p className="font-semibold">
-                  GitHub
-                </p>
+                <div className="flex-1">
 
-                <a
-                  href="https://github.com/millywanderi"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-600 hover:text-blue-700"
-                >
-                  https://github.com/millywanderi
-                </a>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    LinkedIn
+                  </h3>
+
+                  <p className="mt-2 text-gray-600">
+                    Connect with me professionally and follow my journey.
+                  </p>
+
+                  <a
+                    href="https://www.linkedin.com/in/millicent-wanderi-9aa894206/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-block font-semibold text-blue-700 hover:underline"
+                  >
+                    Connect →
+                  </a>
+
+                </div>
 
               </div>
 
             </div>
 
-            <div className="flex items-center gap-5">
+            {/* GitHub */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
 
-              <div className="bg-blue-700 text-white p-4 rounded-full">
-                <FaMapMarkerAlt />
+              <div className="flex items-start gap-5">
+
+                <div className="rounded-full bg-blue-700 p-4 text-white">
+                  <FaGithub />
+                </div>
+
+                <div className="flex-1">
+
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    GitHub
+                  </h3>
+
+                  <p className="mt-2 text-gray-600">
+                    Explore my software engineering and AI projects.
+                  </p>
+
+                  <a
+                    href="https://github.com/millywanderi"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-block font-semibold text-blue-700 hover:underline"
+                  >
+                    View Projects →
+                  </a>
+
+                </div>
+
               </div>
 
-              <div>
+            </div>
 
-                <p className="font-semibold">
-                  Location
-                </p>
+            {/* Location */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
 
-                <p className="text-gray-600">
-                  Nairobi, Kenya
-                </p>
+              <div className="flex items-start gap-5">
+
+                <div className="rounded-full bg-blue-700 p-4 text-white">
+                  <FaMapMarkerAlt />
+                </div>
+
+                <div className="flex-1">
+
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Location
+                  </h3>
+
+                  <p className="mt-2 text-gray-600">
+                    Based in Nairobi, Kenya and available for remote
+                    collaborations worldwide.
+                  </p>
+
+                </div>
 
               </div>
 
@@ -133,11 +164,10 @@ const Contact = () => {
 
           </div>
 
-          {/* Right */}
-
+          {/* Right Side */}
           <div className="rounded-3xl bg-gray-50 p-10 shadow-lg">
 
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="mb-8 text-2xl font-bold">
               Send a Message
             </h3>
 
@@ -162,12 +192,11 @@ const Contact = () => {
               />
 
               <button
-                className="flex items-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white hover:bg-blue-800 transition"
+                type="submit"
+                className="flex items-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
               >
                 <FaPaperPlane />
-
                 Send Message
-
               </button>
 
             </form>
