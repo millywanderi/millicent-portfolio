@@ -11,124 +11,147 @@ const About = () => {
       id="about"
       className="bg-white py-24"
     >
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl px-8 lg:px-12">
 
         {/* Heading */}
 
-        <div className="text-center mb-16">
+        <div className="mb-20 text-center">
 
-          <p className="text-blue-700 font-semibold uppercase tracking-widest">
+          <p className="font-semibold uppercase tracking-[0.25em] text-blue-700">
             About Me
           </p>
 
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
-            Bridging Disaster Management and Technology
+          <h2 className="mt-4 text-4xl font-extrabold text-slate-900">
+            Building Technology that Strengthens Humanitarian Action
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
-            I am a Disaster Management professional and Software Engineer
-            passionate about applying artificial intelligence, software
-            engineering, and data-driven technologies to strengthen disaster
-            resilience, humanitarian response, and sustainable development.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            I am a Disaster Management graduate, Software Engineer, and
+            humanitarian technology professional passionate about applying
+            artificial intelligence, software engineering, and data-driven
+            innovation to improve disaster resilience, humanitarian response,
+            and sustainable development.
           </p>
 
         </div>
 
-        {/* Content */}
+        <div className="grid items-center gap-20 lg:grid-cols-2">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Story */}
 
-          {/* Left */}
+          <div className="space-y-8">
 
-          <div className="space-y-6 text-gray-600 leading-8 text-lg">
+            <p className="text-lg leading-9 text-slate-600">
 
-            <p>
-              My journey began after witnessing the devastating effects of a
-              landslide that claimed the life of one of my classmates in Kenya.
-              That experience inspired me to dedicate my career to reducing
-              disaster risk and protecting vulnerable communities.
+              My passion for disaster management began in 2004 after witnessing
+              the devastating Kihuri landslide in Nyeri County, Kenya, which
+              claimed the life of one of my classmates. That experience
+              profoundly shaped my understanding of the human cost of disasters
+              and inspired my lifelong commitment to building safer and more
+              resilient communities.
+
             </p>
 
-            <p>
-              I later earned a Bachelor's degree in Disaster Management and
-              International Diplomacy before expanding my expertise into
-              software engineering through ALX Africa. Today, I combine these
-              disciplines to build intelligent digital solutions that improve
-              humanitarian operations and emergency decision-making.
+            <p className="text-lg leading-9 text-slate-600">
+
+              I pursued a Bachelor's degree in Disaster Management and
+              International Diplomacy, where I developed expertise in disaster
+              risk reduction, emergency preparedness, humanitarian response,
+              and sustainable development. While working in humanitarian
+              operations, I became increasingly interested in how technology
+              could solve many of the operational challenges facing emergency
+              response organisations.
+
             </p>
 
-            <p>
-              My long-term vision is to become a global leader in humanitarian
-              technology by integrating artificial intelligence, digital
-              innovation, and evidence-based disaster management to create more
-              resilient communities across Africa and beyond.
+            <p className="text-lg leading-9 text-slate-600">
+
+              To bridge this gap, I trained as a Software Engineer through ALX
+              Africa. Today, I design scalable backend systems and develop
+              AI-powered solutions such as <strong>ReliefTrack AI</strong>, a
+              humanitarian resource management platform that improves
+              transparency, accountability, and evidence-based decision-making
+              for non-governmental organisations.
+
+            </p>
+
+            <p className="text-lg leading-9 text-slate-600">
+
+              My long-term vision is to become a leader in humanitarian
+              innovation by integrating disaster management, artificial
+              intelligence, and public policy to develop intelligent systems
+              that help governments and humanitarian organisations anticipate
+              risks, optimise resource allocation, and protect vulnerable
+              communities across Africa.
+
             </p>
 
           </div>
 
-          {/* Right */}
+          {/* Highlights */}
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2">
 
-            <div className="rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
 
-              <FaGraduationCap className="text-4xl text-blue-700 mb-4" />
+              <FaGraduationCap className="mb-5 text-5xl text-blue-700" />
 
-              <h3 className="text-xl font-bold mb-3">
-                Education
+              <h3 className="text-xl font-bold text-slate-900">
+                Disaster Management
               </h3>
 
-              <p className="text-gray-600">
-                BSc Disaster Management &
-                International Diplomacy
+              <p className="mt-4 leading-7 text-slate-600">
+                Bachelor's degree in Disaster Management and International
+                Diplomacy with expertise in disaster risk reduction,
+                humanitarian coordination, and sustainable development.
               </p>
 
             </div>
 
-            <div className="rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
 
-              <FaLaptopCode className="text-4xl text-blue-700 mb-4" />
+              <FaLaptopCode className="mb-5 text-5xl text-blue-700" />
 
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="text-xl font-bold text-slate-900">
                 Software Engineering
               </h3>
 
-              <p className="text-gray-600">
-                Backend development, APIs,
-                databases, AI systems and cloud
-                technologies.
+              <p className="mt-4 leading-7 text-slate-600">
+                Building scalable backend systems using Python, FastAPI,
+                PostgreSQL, React, Docker, REST APIs, and modern cloud-native
+                development practices.
               </p>
 
             </div>
 
-            <div className="rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
 
-              <FaHandsHelping className="text-4xl text-blue-700 mb-4" />
+              <FaHandsHelping className="mb-5 text-5xl text-blue-700" />
 
-              <h3 className="text-xl font-bold mb-3">
-                Humanitarian Impact
+              <h3 className="text-xl font-bold text-slate-900">
+                Humanitarian Practice
               </h3>
 
-              <p className="text-gray-600">
-                Emergency response, community
-                resilience and disaster
-                preparedness.
+              <p className="mt-4 leading-7 text-slate-600">
+                Experience in emergency preparedness, humanitarian response,
+                community resilience, disaster risk reduction, and emergency
+                response training.
               </p>
 
             </div>
 
-            <div className="rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition">
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl">
 
-              <FaRobot className="text-4xl text-blue-700 mb-4" />
+              <FaRobot className="mb-5 text-5xl text-blue-700" />
 
-              <h3 className="text-xl font-bold mb-3">
-                AI Innovation
+              <h3 className="text-xl font-bold text-slate-900">
+                Humanitarian AI
               </h3>
 
-              <p className="text-gray-600">
-                Developing intelligent
-                humanitarian solutions for
-                NGOs and disaster management.
+              <p className="mt-4 leading-7 text-slate-600">
+                Developing AI-powered solutions that improve humanitarian
+                logistics, transparency, resource allocation, and disaster
+                preparedness through intelligent decision support.
               </p>
 
             </div>

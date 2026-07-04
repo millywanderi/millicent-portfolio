@@ -5,24 +5,53 @@ import {
   FaMapMarkerAlt,
   FaPaperPlane,
 } from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        form.current?.reset();
+      })
+      .catch(() => {
+        alert("Failed to send message. Please try again.");
+      });
+  };
+
   return (
-    <section id="contact" className="bg-white py-24">
-      <div className="max-w-6xl mx-auto px-8">
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-slate-100 via-white to-blue-50 py-24"
+    >
+      <div className="mx-auto max-w-7xl px-8 lg:px-12">
 
         {/* Heading */}
+
         <div className="mb-16 text-center">
 
           <p className="font-semibold uppercase tracking-widest text-blue-700">
             Contact
           </p>
 
-          <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
+          <h2 className="mt-3 text-4xl font-extrabold text-slate-900">
             Let's Build Resilient Communities Together
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             I'm always interested in discussing humanitarian innovation,
             AI for disaster management, software engineering,
             research collaborations, and graduate study opportunities.
@@ -32,27 +61,28 @@ const Contact = () => {
 
         <div className="grid gap-16 lg:grid-cols-2">
 
-          {/* Left Side */}
+          {/* LEFT */}
+
           <div className="space-y-6">
 
             {/* Email */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
 
               <div className="flex items-start gap-5">
 
                 <div className="rounded-full bg-blue-700 p-4 text-white">
-                  <FaEnvelope />
+                  <FaEnvelope size={20} />
                 </div>
 
-                <div className="flex-1">
+                <div>
 
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-bold text-slate-900">
                     Email
                   </h3>
 
-                  <p className="mt-2 text-gray-600">
-                    Let's discuss opportunities, collaborations,
-                    or graduate studies.
+                  <p className="mt-2 text-slate-600">
+                    Let's discuss opportunities, collaborations and graduate studies.
                   </p>
 
                   <a
@@ -69,28 +99,29 @@ const Contact = () => {
             </div>
 
             {/* LinkedIn */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
 
               <div className="flex items-start gap-5">
 
                 <div className="rounded-full bg-blue-700 p-4 text-white">
-                  <FaLinkedin />
+                  <FaLinkedin size={20} />
                 </div>
 
-                <div className="flex-1">
+                <div>
 
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-bold text-slate-900">
                     LinkedIn
                   </h3>
 
-                  <p className="mt-2 text-gray-600">
+                  <p className="mt-2 text-slate-600">
                     Connect with me professionally and follow my journey.
                   </p>
 
                   <a
                     href="https://www.linkedin.com/in/millicent-wanderi-9aa894206/"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="mt-4 inline-block font-semibold text-blue-700 hover:underline"
                   >
                     Connect →
@@ -103,28 +134,29 @@ const Contact = () => {
             </div>
 
             {/* GitHub */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
 
               <div className="flex items-start gap-5">
 
                 <div className="rounded-full bg-blue-700 p-4 text-white">
-                  <FaGithub />
+                  <FaGithub size={20} />
                 </div>
 
-                <div className="flex-1">
+                <div>
 
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-bold text-slate-900">
                     GitHub
                   </h3>
 
-                  <p className="mt-2 text-gray-600">
+                  <p className="mt-2 text-slate-600">
                     Explore my software engineering and AI projects.
                   </p>
 
                   <a
                     href="https://github.com/millywanderi"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="mt-4 inline-block font-semibold text-blue-700 hover:underline"
                   >
                     View Projects →
@@ -137,23 +169,23 @@ const Contact = () => {
             </div>
 
             {/* Location */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-xl">
 
               <div className="flex items-start gap-5">
 
                 <div className="rounded-full bg-blue-700 p-4 text-white">
-                  <FaMapMarkerAlt />
+                  <FaMapMarkerAlt size={20} />
                 </div>
 
-                <div className="flex-1">
+                <div>
 
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    Location
+                  <h3 className="text-xl font-bold text-slate-900">
+                    Nairobi, Kenya
                   </h3>
 
-                  <p className="mt-2 text-gray-600">
-                    Based in Nairobi, Kenya and available for remote
-                    collaborations worldwide.
+                  <p className="mt-2 text-slate-600">
+                    Available for remote collaborations, research and humanitarian technology projects worldwide.
                   </p>
 
                 </div>
@@ -164,36 +196,47 @@ const Contact = () => {
 
           </div>
 
-          {/* Right Side */}
-          <div className="rounded-3xl bg-gray-50 p-10 shadow-lg">
+          {/* RIGHT */}
 
-            <h3 className="mb-8 text-2xl font-bold">
+          <div className="rounded-3xl border border-slate-200 bg-white p-10 shadow-xl">
+
+            <h3 className="mb-8 text-2xl font-bold text-slate-900">
               Send a Message
             </h3>
 
-            <form className="space-y-6">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="space-y-6"
+            >
 
               <input
+                name="user_name"
                 type="text"
                 placeholder="Your Name"
-                className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-blue-700"
+                required
+                className="w-full rounded-xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-700"
               />
 
               <input
+                name="user_email"
                 type="email"
                 placeholder="Email Address"
-                className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-blue-700"
+                required
+                className="w-full rounded-xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-700"
               />
 
               <textarea
-                rows={5}
+                name="message"
+                rows={6}
                 placeholder="Your Message"
-                className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-blue-700"
+                required
+                className="w-full rounded-xl border border-slate-300 px-5 py-4 outline-none transition focus:border-blue-700"
               />
 
               <button
                 type="submit"
-                className="flex items-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800"
+                className="flex items-center gap-3 rounded-xl bg-blue-700 px-8 py-4 font-semibold text-white transition hover:bg-blue-800 hover:shadow-lg"
               >
                 <FaPaperPlane />
                 Send Message
