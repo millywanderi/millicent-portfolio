@@ -70,14 +70,6 @@ const Navbar = () => {
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
 
-          <a
-            href="/Millicent_Wanderi_CV.pdf"
-            download
-            className="rounded-xl bg-blue-700 px-5 py-3 font-semibold text-white transition hover:bg-blue-800"
-          >
-            Resume
-          </a>
-
         </div>
 
       </div>
